@@ -1192,23 +1192,23 @@ void LCDWIKI_SPI::Set_Rotation(uint8_t r)
 		{
 			case 0: 
 				val = 0xD8; //0 degree
-				xoffset = 2;
-				yoffset = 3;
+				xoffset = 0;
+				yoffset = 32;
 				break;
 		 	case 1: 
 				val = 0xA8; //90 degree 
-				xoffset = 3;
-				yoffset = 2;
+				xoffset = 32;
+				yoffset = 0;
 				break;
 		 	case 2: 
 				val = 0x08; //180 degree 
-				xoffset = 2;
-				yoffset = 1;
+				xoffset = 0;
+				yoffset = 0;
 				break;
 		 	case 3: 
 				val = 0x68; //270 degree 
-				xoffset = 1;
-				yoffset = 2;
+				xoffset = 0;
+				yoffset = 0;
 				break;			
 		}
 		writeCmdData8(MD, val);
